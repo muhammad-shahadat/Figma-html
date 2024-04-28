@@ -487,10 +487,19 @@ div.usd{
     
     .col-sm-4{
        margin-bottom: 30px;
-    }
     .product{
-        min-width: 90%;
+        min-width: 100%;
+       
+    }
+    .product img{
+        width: 70%;
+        margin-right: 20px;
   
+        
+    }
+    .custom-card1{
+        margin-bottom: 30px;
+    }
     }
     .find-car{
         display: flex;
