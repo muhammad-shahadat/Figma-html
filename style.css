@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    outline: none;
+    scroll-behavior: smooth;
+}
+header{
+    position: sticky;
+    z-index: 99;
+    top: 0;
+}
+.navbar{
+    padding: 20px;
+   
+}
+
+.nav-link{
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    color: #0D0A19;
+    margin-left: 20px;
+    
+
+}
+.signUp{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.1px;
+    color: #9A9EA7;
+    
+}
+.signUp img{
+    background-color:#F5F6F7;
+    width: 32px;
+    height: 32px;
+    border-radius: .5rem;
+    padding:8px 5px;
+    margin-right: 5px;
+   
+
+    
+}
+/* section1 starts here */
+.section1{
+    background-image: url("img/bgimg.png");
+    width: 100%;
+    height: 564px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section1 h1{
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 74px;
+    letter-spacing: -0.3px;
+    text-align: center;
+    color:#FFFFFF;
+
+}
+.section1 p{
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 27px;
+    text-align: center;
+    color:#FFFFFF;
+    
+}
+.h1-div{
+    padding-top: 150px;
+}
+/* section1 ends here */
+
+/* section2 starts here */
+
+
+
+
+/* section2 ends here */
+
+/* section3 starts here  */
+.section3{
+    margin-top: 100px;
+
+}
+.col-md-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* section3 ends here */
+
+/* section4 starts here  */
+#section4 h2{
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.1px;
+    color: #0D0A19;
+   
+}
+div.header{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+p span.number-style{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: right;
+    color: #9A9EA7;
+    
+}
+p span.arrowStyle{
+    width: 46px;
+    height: 46px;
+    background-color: #F5F6F7;
+    border-radius: .5rem;
+    padding: 12px 15px;
+    
+
+    
+    
+    
+}
+.p-style1{
+    font-family: Inter;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: -0.1px;
+    color:#9A9EA7;
+    margin-top: -15px;
+    text-align: left;
+}
+.dot-style1{
+    margin: 0 5px;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.09166666865348816px;
+    color: #9A9EA7;
+    
+
+}
+#section4 h3{
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: left;
+    color: #0D0A19;  
+}
+.logo-style{
+    border: 1px solid #E4E6E8;
+    width: 38px;
+    height: 38px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+#section4 h4{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+      
+
+}
+.p-style2{
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.10000000149011612px;
+    margin-top: -7px;
+
+}
+
+#section4 h5{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    
+}
+.p-style3{
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    
+}
+.btn-style{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #7963F0;
+    height: 46px;
+    width: 116px;
+     
+}
+/* section4 ends here  */
+
+/* section5 starts here */
+
+#section5{
+    margin: 100px 0;
+}
+.p-sliderHeading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.p-slider{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    
+}
+.product{
+    left: 0;
+    position: relative;
+    margin: 0 30px;
+    transition: all 0.4s;
+   
+}
+.p-title{
+    margin: 20px 0;
+}
+
+
+/* section5 ends here */
+
+/* section6 starts here */
+
+#section6 h3{
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    color: #0D0A19;   
+}
+#section6 p{
+    margin: 20px 0 50px 0;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    color:  #9A9EA7;   
+}
+div.desc-body{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin-bottom: 80px;
+}
+.desc{
+    margin-left: 30px;
+}
+div.desc-body a{
+    margin-left: 100px;
+}
+div.desc h4{
+    margin-bottom: -1px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: left;
+    color: #0D0A19;
+    
+}
+div.desc span{
+    margin-top: -1px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    color: #9A9EA7;
+}
+#section6 .btn{
+    margin: 0 10px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: center;
+    color: #9A9EA7;
+    
+}
+#section6 .customBtn{
+    width: 111px;
+    height: 40px;
+    color: #0D0A19;
+    border: 1px solid #EEEEEE;
+}
+.find-car{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#section6 h5{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 35px;
+    text-align: left;
+    color: #0D0A19;
+    
+}
+div.desc2 span{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: right;
+    color: #0D0A19;
+}
+
+.desc2{
+    margin-top: -30px;
+    margin-bottom: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div.some-margin{
+    margin-top: 93.5px;
+}
+
+/* section6 ends here */
+
+/*section7 starts here*/
+#section7{
+    margin-top: 60px;
+    padding: 50px 0px;
+    background-color: #F5F6F7;
+}
+#section7 h5{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    color: #0D0A19;
+    
+}
+div.footer-top p{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    color: #9A9EA7;
+    
+}
+.margin1{
+    margin-left: 50px;
+}
+
+
+/*section7 ends here */
+
+/*section8 starts here */ 
+#section8{
+    margin: 20px 0;
+}
+span.footer-desc{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    color: #0D0A19;
+}
+.copy-right{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    color: #9A9EA7;
+}
+div.left-margin{
+    display: flex;
+    align-items: center;
+    margin-left: 70px;
+}
+
+span.english{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    color: #9A9EA7;
+    
+}
+
+div.usd{
+    display: flex;
+    align-items: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    color: #9A9EA7;
+    margin-left: 23px;
+}
+
+
+/* section8 ends here */
+
+/* responsive starts hrer  */
+@media (max-width:768px) {
+    .section1 h1{
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        
+    }
+    .section1 p{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: -0.1px;
+
+    }
+    .h1-div{
+        padding-top: 80px;
+    }
+    .p_div{
+        margin-top: 20px;
+        margin-bottom: 100px;
+    }
+    
+    
+    .col-sm-4{
+       margin-bottom: 30px;
+    }
+    .product{
+        min-width: 90%;
+  
+    }
+    .find-car{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #section6 .btn{
+        margin: 20px 0;
+    }
+    .margin1{
+        margin-left: 0px;
+    }
+    div.header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    .p-sliderHeading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    p.slider-margin{
+        margin-top: 30px;
+    }
+   
+  
+}
+/* responsive ends here  */
+
