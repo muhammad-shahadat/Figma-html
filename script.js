@@ -5,8 +5,8 @@ let maxMove = 225;
 
 let mobileView = window.matchMedia("(max-width:768px)");
 if (mobileView.matches) {
-    movePerClick = 100;
-    maxMove = 600;
+    movePerClick = 120;
+    maxMove = 650;
 }
 
 
