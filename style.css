@@ -494,14 +494,12 @@ div.usd{
     }
     .product img{
         width: 70%;
-        margin-right: 20px;
-  
-        
+        margin-right: 20px; 
     }
     .custom-card1{
         margin-bottom: 30px;
     }
-    }
+    
     .find-car{
         display: flex;
         flex-direction: column;
