@@ -86,6 +86,71 @@ header{
 
 /* section2 starts here */
 
+.lower-header{
+    max-width: 945px;
+    height: 82px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 4px 0px rgba(153, 155, 168, 0.15);
+
+    margin: -44px auto 0 auto;
+    background-color: #FFFFFF;
+
+}
+.form-select{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    color: #0D0A19;
+    border: none;
+    margin-bottom: -20px;
+    margin-left: -40px;
+}
+.p-text{
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    color: #9A9EA7;
+    margin-top: -15px;
+    margin-left: 15px;
+}
+.customFormSelect{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    color: #9A9EA7;
+    margin-top: -25px;
+    margin-right: -1px;
+}
+.customBtn{
+    width: 120px;
+    height: 46px;
+    background-color: #7963F0;
+    margin-top: 19px;
+    margin-right: 15px;
+}
+.search{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.customCol{
+    border-right: 1px solid #EDE8E9;
+    height: 32px;
+    margin-top: 24px;  
+}
 
 
 
@@ -527,6 +592,41 @@ div.usd{
     }
     p.slider-margin{
         margin-top: 30px;
+    }
+
+    .lower-header{
+        padding: 20px 0;
+        margin-top: -300px;
+        height: auto;
+    }
+
+    .customCol{
+        height: 60px;
+        border-right: none;
+        border-bottom: 1px solid #EDE8E9;
+        max-width: 90%;
+        margin: 0 auto 20px auto;
+    }
+
+    .form-select{
+        margin-bottom: -20px;
+        margin-left: -40px;
+    }
+    .p-text{
+        margin-top: -15px;
+        margin-left:-20px;
+    }
+    .customFormSelect{
+        margin-top: -25px;
+        margin-left: -13px;
+        margin-right: -1px;
+        
+    }
+    .customBtn{
+        width: 100%;
+        margin-left: 33px;
+        height: 46px;
+        
     }
    
   
