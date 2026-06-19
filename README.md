@@ -1,293 +1,110 @@
-# 🚀 Quick-GPT - AI Powered Chat & Image Generation App
+# 🚗 Figma to HTML - Car Auction Landing Page
 
-Quick-GPT is a full-stack AI application built with the **MERN** stack, featuring real-time AI chatting and image generation capabilities. It includes a robust authentication system, credit-based usage, and a sleek dark/light mode UI.
+A fully responsive car auction landing page built from a Figma design. This project showcases a clean, modern UI for browsing and bidding on vehicles, featuring active auctions, car listings by model, and a user-friendly search interface.
 
 ---
 
 ## 🌐 Live Demo
-- **Frontend:** [https://shahadat-quick-gpt.netlify.app](https://shahadat-quick-gpt.netlify.app)
-- **Backend:** [https://quick-gpt-server-qbhl.onrender.com](https://quick-gpt-server-qbhl.onrender.com)
-
-> **Note:** The server is hosted on a free Render tier. If it's inactive, please allow **30-60 seconds** for the initial "cold start."
+- **Live Site:** [https://figma-to-html-conversion.netlify.app](https://figma-to-html-conversion.netlify.app)
+- **GitHub Repository:** [https://github.com/muhammad-shahadat/Figma-html](https://github.com/muhammad-shahadat/Figma-html)
 
 ---
 
-## 📸 Screenshots
-
-### ☀️ Light Mode
-![Dashboard Light Mode](./screenshots/dashboard-light.png)
-
-### 🌙 Dark Mode
-![Dashboard Dark Mode](./screenshots/dashboard-dark.png)
-
-### 🌙 Dark Mode
-![Credits Page](./screenshots/credit-dark.png)
-
-### ☀️ Light Mode
-![Chat Box](./screenshots/chatbox-light.png)
-
-![Login Page](./screenshots/login.png)
-
-### Responsive View
-![Mobile View](./screenshots/mobile.png)
-
----
 
 ## ✨ Key Features
 
-- **🔐 Advanced Auth:** Secure authentication using JWT (Access + Refresh Token with rotation), HTTP-only cookies, email verification via Nodemailer, and Guest Login for quick access.
-- **💬 AI Chatbot:** Real-time conversational AI with message history persistence using MongoDB.
-- **🖼️ Image Generation:** AI-powered image creation (Integration in progress).
-- **💳 Credit System:** Users get limited credits per day/account to interact with the AI (Payment integration in progress).
-- **🌓 UI/UX:** Fully responsive design with **Dark/Light Mode** support and smooth animations.
-- **⚡ Performance:** Optimized state management with **React Query** for seamless data fetching and caching.
+- **🔍 Advanced Search Filters:** Search cars by Type, Make, Year, Model, and Price range with an intuitive dropdown interface.
+- **🚗 Active Auctions Display:** Showcase of current vehicle auctions with bid amounts, seller information, and "Place Bid" buttons.
+- **🏷️ Find Car by Model:** Interactive slider to browse vehicles by model categories (SUV, Sedan, etc.) with vehicle counts.
+- **📊 Popular Makes Section:** Display of popular car manufacturers with vehicle counts and quick navigation links.
+- **🌓 Fully Responsive Design:** Optimized for all screen sizes (mobile, tablet, desktop) using Bootstrap 5.
+- **🎨 Pixel-Perfect Implementation:** Faithful recreation of Figma design with attention to typography, spacing, and color schemes.
 
 ---
 
 ## 🧠 Challenges & Learnings
 
-### ⚡ Mastering Server-State with React Query
-This was my first time using **TanStack Query (React Query)**, and it significantly improved how I handle server data. 
-- **Mutations & Queries:** I learned to manage complex asynchronous states, such as using `useMutation` for chat interactions and `useQuery` for fetching chat history.
-- **Cache Management:** Understanding how to invalidate queries and sync the cache after a new message or chat creation was a major learning curve that resulted in a much smoother UI.
+### 📐 Converting Figma Design to Code
+This project was my first attempt at converting a Figma design into a fully functional webpage. Key learnings included:
+- **Pixel-Perfect Alignment:** Ensuring every element matched the design specifications using precise CSS measurements.
+- **Responsive Adaptation:** Maintaining design integrity across different screen sizes while keeping the visual hierarchy intact.
 
-### 🛡️ UX-Driven Error & Loading Handling
-Instead of leaving the user in the dark during slow responses, I focused on high-quality UX:
-- **Graceful Error Handling:** I implemented logic to catch API errors (like Gemini's rate limits) and display user-friendly notifications using **React Hot Toast**.
-- **Cold Start Strategy:** To tackle Render's free tier "cold starts," I built a custom loading sequence that informs users about the server's status, preventing them from thinking the app is broken.
+### 🎯 Bootstrap 5 Integration
+Working with Bootstrap 5 taught me:
+- **Grid System Mastery:** Efficiently using the 12-column grid for complex layouts like the auction cards and search filters.
+- **Custom Component Styling:** Overriding Bootstrap defaults while maintaining framework consistency.
 
-### 🔐 Secure Auth Flow & State Sync
-Implementing a persistent authentication system that stays in sync with a global state was challenging. I learned to handle secure JWT flows and ensured that during logout, both the **Local State** and **React Query Cache** are completely cleared to maintain data privacy.
-
-### 🌐 Monorepo Deployment & CORS
-Configuring a monorepo (Frontend & Backend in one repo) for separate deployment platforms (Netlify & Render) taught me a lot about Environment Variables, CORS policies, and ensuring secure communication between cross-origin domains.
+### 🖼️ Slider Implementation
+Building the "Find Car by Model" slider from scratch (without external libraries) was a valuable learning experience:
+- **Manual Slider Logic:** Implementing smooth transitions using vanilla JavaScript and CSS transitions.
+- **Responsive Slider:** Adjusting slider behavior on mobile devices using media queries.
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **React.js** (Vite)
-- **Tailwind CSS** (Styling)
-- **React Query** (Server State Management)
-- **Lucide React** (Icons)
-- **React Hot Toast** (Notifications)
+- **HTML5** (Semantic markup)
+- **CSS3** (Custom styling with CSS variables)
+- **JavaScript** (Vanilla JS for interactivity)
+- **Bootstrap 5.3.3** (Responsive grid and components)
+- **Google Fonts** (Inter font family)
 
-### Backend
-- **Node.js & Express.js**
-- **MongoDB & Mongoose** (Database)
-- **Passport & JSON Web Token (JWT)** (Authentication)
-- **CORS & Dotenv** (Security & Config)
+### Deployment
+- **Netlify** (Frontend hosting)
+- **GitHub** (Version control)
 
 ---
 
-## 🗄️ Database Schema (MongoDB ER Diagram)
-
-```mermaid
-erDiagram
-    PLAN ||--o{ USER : assigned_to
-    USER ||--o{ CHAT : creates
-    CHAT ||--o{ MESSAGE : contains
-    
-
-    USER {
-        ObjectId _id
-        string name
-        string email
-        string password
-        boolean isActive
-        ObjectId plan
-        date createdAt
-        date updatedAt
-    }
-    PLAN {
-        ObjectId _id
-        string name
-        number maxChatsPerDay
-        number maxMessagesPerChat
-        number contextWindow
-        number price
-        date createdAt
-        date updatedAt
-    }
-    CHAT {
-        ObjectId _id
-        ObjectId user
-        string title
-        boolean isArchived
-        date createdAt
-        date updatedAt
-    }
-
-    MESSAGE {
-        ObjectId _id
-        ObjectId chat
-        string role
-        string content
-        boolean isImage
-        number tokenUsage
-        date createdAt
-        date updatedAt
-    }
-
-    
-```
----
-
-## 📁 Project Structure (Monorepo)
+## 📁 Project Structure
 
 ```text
-├── client/                # Frontend React application
-│   ├── src/hooks/         # Custom hooks (Auth, Chat)
-│   ├── src/components/    # Reusable UI components
-│   └── ...
-└── server/                # Backend Node.js API
-    ├── models/            # MongoDB Schemas
-    ├── routes/            # API Endpoints
-    └── controllers/       # Business Logic
+Figma-html/
+├── index.html          # Main HTML file
+├── style.css           # Custom CSS styles
+├── script.js           # JavaScript interactivity
+├── img/                # All images and icons
+│   ├── Logo.png
+│   ├── bgimg.png
+│   ├── car1.png
+│   ├── car2.png
+│   ├── car3.png
+│   └── ... (other assets)
+└── README.md           # Project documentation
 ```
 ---
 ## 🚀 Installation & Local Setup
 
 ### 📋 Prerequisites
-- **Node.js**: v18.x or higher
-- **MongoDB**: Atlas account or local Compass
-- **Git**: Installed on your machine
+- A modern web browser
+- Any code editor (VS Code recommended)
+- Live Server extension (optional but recommended)
 
 ### 1. Clone the repository:
 ```bash
-git clone https://github.com/muhammad-shahadat/quick-gpt
-cd quick-gpt
+git clone https://github.com/muhammad-shahadat/Figma-html.git
+cd Figma-html
 ```
-### 2. Setup Backend
+### 2. Open the project:
 ```bash
-cd server
-npm install
+# Open index.html directly in your browser
+# OR use VS Code Live Server for better development experience
+code .
 ```
-#### Create a .env file inside the server/ folder and add:
-```bash
+---
 
-PORT=3000
-MONGODB_URI=your_mongodb_connection_string
-NODE_ENV=development
-
-# Brevo mailer system configuration
-BREVO_SMTP_API_KEY=
-
-# JSON Web Token configurations
-JWT_ACTIVATION_KEY=
-JWT_ACCESS_KEY=
-JWT_REFRESH_KEY=
-
-CLIENT_URL=http://localhost:5173
-GEMINI_API_KEY=your_gemini_api_key
-
-# ImageKit configurations
-IMAGEKIT_PUBLIC_KEY=
-IMAGEKIT_PRIVATE_KEY=
-IMAGEKIT_URL_ENDPOINT=
-
-# Stripe payment configurations
-STRIPE_PUBLISHABLE_KEY=
-STRIPE_SECRET_KEY=
-STRIPE_WEBHOOK_SECRET_KEY=
-
-```
-#### Then start the backend server:
-```bash
-npm start
-```
-
-### 3. Import Postman Collection
-```text
-
-quick-gpt/
-├── server/
-├── client/
-├── postman/
-│   └── QuickGpt.postman_collection.json
-└── README.md
-```
-The API requests used for seeding and testing are available in:
-
-```text
-postman/QuickGpt.postman_collection.json
-```
-
-Import the collection into Postman:
-
-1. Open Postman
-2. Click Import
-3. Select `postman/QuickGpt.postman_collection.json`
-4. Run the requests
-
-#### 📌 Testing Options:
-- **1.🌐 Live Server (Recommended):** If you want to test against the live demo server instead of localhost, replace `http://localhost:3000` with `https://quick-gpt-server-qbhl.onrender.com` in Postman request URLs. All API endpoints will work immediately without any local setup.
-- **2.💻 Local Machine:** To test completely locally, keep http://localhost:3000 (Make sure your local backend server and MongoDB are running).
-
-
-### 4. Execute Postman API Requests in Order
-> ℹ️ **Note:** The application automatically seeds the initial subscription plans (Basic, Pro, Premium) into your database on the first server startup (`npm start`). You don't need to run any manual database scripts. 
-#### Execute the following requests **in order** from Postman:
-
-```text
-QuickGpt/
-├── authRoute/
-│   ├── POST /register            <-- 1. Create a new user account
-│   ├── GET /activate/verify      <-- 2. Verify account via Email Token
-│   ├── POST /login               <-- 3. Login to receive HttpOnly cookies/tokens
-│   ├── POST /refresh-token
-│   └── POST /logout
-│
-├── userRoute/
-│   └── GET /profile
-│
-├── chatRoute/
-│   ├── POST /create-chat          <-- 4. Establish a new chat session
-│   ├── POST /send-message        <-- 5. Send a chat message to AI
-│   ├── POST /generate-image
-│   ├── GET /chats
-│   └── DELETE /chat/:id
-│
-├── messageRoute/
-│   └── GET /messages
-│
-├── imageRoute/
-│   └── GET /published-images
-│
-├── planRoute/
-│   └── GET /plans                <-- 6. Fetch the automatically seeded plans
-│
-└── paymentRoute/
-    ├── POST /create-checkout-session
-    └── POST /verify-payment
-
-```
-
-### 5. Setup Frontend
-#### Split terminal and go back root dir using `cd ..` then run:
-```bash
-cd client
-npm install
-```
-#### create a .env file (optional) and add: 
-```bash
-VITE_API_BASE_URL=http://localhost:3000
-```
-#### Then run the frontend:
-```bash
-npm run dev
-```
+### 3. Run with Live Server (VS Code):
+- Install "Live Server" extension from VS Code marketplace
+- Right-click on index.html
+- Select "Open with Live Server"
 
 ---
 ## 🛠️ Troubleshooting
 
-- **Server Delay (Cold Start):** As this project is hosted on Render's free tier, the first request might take **30-60 seconds** to wake up the server. Subsequent requests will be much faster.
-
-- **AI Response Issues (Gemini API Rate Limit):** I am using the **Gemini Free API tier**, which has rate limits (RPM - Requests Per Minute). If the AI doesn't respond or shows an error, please wait a minute and try again. Occasionally, the free tier may experience downtime or high latency.
-
-- **CORS Issues:** If you encounter CORS errors locally, verify that your `.env` file in the server directory has the correct `CLIENT_URL` (e.g., `http://localhost:5173`).
-
+- **Images Not Loading:** Ensure the img/ folder is in the same directory as index.html and all image paths are correct.
+- **Slider Not Working:** Make sure script.js is properly linked and contains the prevSlider() and nextSlider() functions.
+- **Bootstrap Icons Not Showing:**  Check CDN links in the <head> section and ensure internet connectivity.
+- **Responsive Issues:** Verify that <meta name="viewport"> tag is present in the <head> section.
 ---
 ## 👨‍💻 Author
 ### Shahadat Hossain
